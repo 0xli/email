@@ -1,0 +1,4 @@
+new tables for smtp
+CREATE TABLE `invalidcontents` (
+  `keyword` varchar(128) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
