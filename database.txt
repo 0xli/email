@@ -1,3 +1,6 @@
+modified tables: queuemsg
+alter table queuemsg add column uidl varchar(255) default null;
+
 new tables for smtp
 CREATE TABLE `invalidcontents` (
   `keyword` varchar(128) DEFAULT NULL
