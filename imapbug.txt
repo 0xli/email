@@ -1,0 +1,46 @@
+01-21 10:19:06 - [D-13] [116.231.148.191] S:* OK ImapServer ready.
+01-21 10:19:06 - [D-13] [116.231.148.191] C:ü­?Ù üó '¡¼qèpi?/Ô?h#S­
+                                                                    >Á 5 S(ò£?0®?Ü,v"H-ÅL£5¤,äû?Xk4À,À+À$À#À
+01-21 10:19:06 - [E-13] [116.231.148.191] null
+java.lang.NullPointerException
+        at com.allcom.imap.server.ImapRequest.readATOM(ImapRequest.java:85)
+        at com.allcom.imap.server.ImapHandler.executeRequest(ImapHandler.java:161)
+        at com.allcom.imap.server.ImapHandler.run(ImapHandler.java:96)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+01-21 10:19:06 - [D-13] [116.231.148.191] socket is closed
+01-21 10:19:06 - [D-13] sessionComplete...
+01-21 10:19:06 - [D-16] [116.231.148.191] S:* OK ImapServer ready.
+01-21 10:19:06 - [D-16] [116.231.148.191] C:1 CAPABILITY
+01-21 10:19:06 - [D-16] [116.231.148.191] S:* CAPABILITY SELECT EXAMINE LIST LSUB STATUS CHECK CLOSE EXPUNGE SEARCH FETCH UID CAPABILITY NOO ...
+01-21 10:19:06 - [D-16] [116.231.148.191] S:1 OK CAPABILITY completed
+01-21 10:19:06 - [D-16] [116.231.148.191] C:2 STARTTLS
+01-21 10:19:06 - [D-16] [116.231.148.191] S:2 OK Begin TLS negotiation now
+01-21 10:19:14 - Received fatal alert: certificate_unknown
+javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+        at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+        at sun.security.ssl.Alerts.getSSLException(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.recvAlert(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.performInitialHandshake(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+        at sun.security.ssl.SSLSocketImpl.startHandshake(Unknown Source)
+        at com.allcom.imap.server.SSLImapServer.createSSLSocket(SSLImapServer.java:67)
+        at com.allcom.imap.server.ImapHandler.doSTARTTLS(ImapHandler.java:1218)
+        at com.allcom.imap.server.ImapHandler.executeRequest(ImapHandler.java:380)
+        at com.allcom.imap.server.ImapHandler.run(ImapHandler.java:96)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+01-21 10:19:14 - [E-16] [116.231.148.191] null
+java.lang.NullPointerException
+        at com.allcom.imap.server.ImapHandler.doSTARTTLS(ImapHandler.java:1220)
+        at com.allcom.imap.server.ImapHandler.executeRequest(ImapHandler.java:380)
+        at com.allcom.imap.server.ImapHandler.run(ImapHandler.java:96)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+01-21 10:19:14 - [D-16] [116.231.148.191] socket is closed
+01-21 10:19:14 - [D-16] sessionComplete...
+01-21 10:19:43 - 
