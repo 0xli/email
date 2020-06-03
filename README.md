@@ -12,7 +12,7 @@
 | pop3 server| pop3 for email client|Java|
 | imap server| imap for email client|Java|
 | webmail | Web UI | HTML/CSS/Javascripts|
-| mailapi | servlet provide access to email database, Rest Api for Email access, also Address book, Attachments, Files. Everything need for Webmail|Java|
+| mailapi |Rest Api for Email access, also Address book, Attachments, Files. Access to backend email database and storage, Everything need for Webmail|Java|
 | clientapi | Rest Api for Email access, also Address book, Attachments, Files. Everything need for APP|Java|
 | noti | Notification | Java|
 
