@@ -2,14 +2,14 @@
 All things related setup email system
 1. Just Webmail
 Simple, but actually it contains:
-a. webmail
-b. smtp server
-c. account management for administrator and event better for auto sign up.
 ###
 | name | description |comments|
 |:------:|:------|-------:|
 | rbl | cash rbl ip |     |
 | smtpgw | spam filter |     |
+|a. webmail | Web UI | HTML/CSS/Javascripts|
+|b. smtp server| smtp for email client|Java|
+|c. account |management for administrator and event better for auto sign up.|Java|
 
 required software:
 1. nginx, web server and more;
