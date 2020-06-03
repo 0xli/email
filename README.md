@@ -23,7 +23,7 @@
 3. mysql
 ```
 
-OS: 
-centos
+### OS: 
+prefer centos
 
 
