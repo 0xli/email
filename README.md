@@ -1,6 +1,7 @@
 # Email Software: Allcom Mailwalk EMAIL system
 ### Everything thing you need to setup an email system.
-### Not Just Webmail。Simple, but actually it contains:
+### Email in database and file/cloud storage.
+### Not Just Webmail, it contains:
 ###
 | name | description |comments|
 |:------:|:------|-------:|
