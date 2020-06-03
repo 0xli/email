@@ -1,7 +1,7 @@
-# email
-All things related setup email system
-Not Just Webmail
-Simple, but actually it contains:
+# Email Software: Allcom Mailwalk EMAIL system
+All things related setup email system.
+### Not Just Webmail
+### Simple, but actually it contains:
 ###
 | name | description |comments|
 |:------:|:------|-------:|
@@ -13,19 +13,18 @@ Simple, but actually it contains:
 | pop3 server| pop3 for email client|Java|
 | imap server| imap for email client|Java|
 | webmail | Web UI | HTML/CSS/Javascripts|
-| mailapi | Rest Api for Email access, also Address book, Attachments, Files. Everything need for Webmail|Java|
+| mailapi | servlet provide access to email database, Rest Api for Email access, also Address book, Attachments, Files. Everything need for Webmail|Java|
 | clientapi | Rest Api for Email access, also Address book, Attachments, Files. Everything need for APP|Java|
 | noti | Notification | Java|
 
-required software:
+### required software:
+```
 1. nginx, web server and more;
 2. tomcat
 3. mysql
+```
 
 OS: 
 centos
 
-Email Software:Allcom Mailwalk EMAIL system
-1. newwebmail: html, css and js
-2. mailapi: servlet provide access to email database
-3. smtp: a java stand alone software;
+
