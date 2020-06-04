@@ -6,7 +6,7 @@
 | name | description |comments|
 |:------:|:------|-------:|
 | rbl | cash rbl ip list |Java     |
-| account |management for administrator and event better for auto sign up.|Java|
+| mailadmin |domain based email admin, management for administrator and event better for auto sign up.|Java|
 | smtpgw | spam filter |Java     |
 | smtpgwmanager | Web UI to setup domain, statistics |HTML/CSS/Javascript/Java     |
 | smtp server| smtp for email client, also receive and deliver email|Java|
