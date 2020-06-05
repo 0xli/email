@@ -24,3 +24,16 @@ it will build file list first and copy later:
 [sender] showing file filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319 because of pattern filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319
 
 ```
+###2. copy/backup without password
++ The SSH protocol uses public key cryptography for authenticating hosts and users. 
++ https://www.ssh.com/ssh/keygen/
++ https://www.thegeekstuff.com/2011/07/rsync-over-ssh-without-password/
+```
+1. $ ssh-keygen
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+2. $ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.200.10
+3. ssh 192.168.200.10
+
+```
+
