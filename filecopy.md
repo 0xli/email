@@ -37,3 +37,5 @@ Enter same passphrase again:
 
 ```
 
+###3. File Diretory
+mklink /D F:\data\filestore \\192.168.0.94\filestore\filestore\filestore
