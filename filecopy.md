@@ -1,4 +1,4 @@
-1. 
+### 1. Only copy some files
 ```
 #rsync -avvz --progress --include-from=file_hash.text liwei@192.168.0.163:/data/filestore filestore
 file_hash.txt:
@@ -7,4 +7,17 @@ file_hash.txt:
 + filestore/202005/11/0a898ed93d9d64f682d87d8284951cc7
 + */
 - *
+
+it will build file list first and copy later:
+[sender] hiding file filestore/201703/28/894d30e7bc38dd39f137c762d4ac9b8f because of pattern *
+[sender] showing file filestore/201703/28/998e40b59ca3b43e45a7b7519fd639bc because of pattern filestore/201703/28/998e40b59ca3b43e45a7b7519fd639bc
+[sender] hiding file filestore/201703/28/cc36347ed94aa66cb94c21026776cd7e because of pattern *
+[sender] hiding file filestore/201703/28/b62bfdeda61d103a0a01006470078ec0 because of pattern *
+[sender] hiding file filestore/201703/28/7d9ba8507e2b5d8611b5093ca2ddacaa because of pattern *
+[sender] hiding file filestore/201703/28/ce04fae504135131e430eb62dcecfc6c because of pattern *
+[sender] hiding file filestore/201703/28/cb86cad8ce101ee9a24f2730a0567d80 because of pattern *
+[sender] hiding file filestore/201703/28/22178b582d24dd9fd38394280ac5f9c0 because of pattern *
+[sender] hiding file filestore/201703/28/2b598157c82c58cb27906fe2a76a2dd6 because of pattern *
+[sender] showing file filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319 because of pattern filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319
+
 ```
