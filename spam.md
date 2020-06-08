@@ -12,9 +12,9 @@ https://stackoverflow.com/questions/36149094/how-to-set-dkim-and-spf-in-exchanbg
 https://github.com/markenwerk/java-utils-mail-dkim
 
 ### IP 
-http://www.reputationauthority.org
-https://talosintelligence.com/reputation_center
-https://www.spamhaus.org/
++ http://www.reputationauthority.org
++ https://talosintelligence.com/reputation_center
++ https://www.spamhaus.org/
 
 ### Content 
 https://talosintelligence.com/software
