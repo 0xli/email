@@ -1,4 +1,10 @@
 1. hareware and OS
+```
+db: 512G, mysql
+mail: 1T SSD，smtp,pop3,imap
+webmail: 
+smtwgw:
+```
 2. file 
 ```
 2.1 db:格式化和加载/dev/sdb(512G)到/data
