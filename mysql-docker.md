@@ -37,6 +37,13 @@ docker pull mysql:5.7
 # 其他版本
 docker pull mysql:8
 docker pull mysql:5.6
+
+centos docker pull image解决timeout超时问题:添加国内镜像
+vi /etc/docker/daemon.json
+{
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+service docker restart
 ```
 
 # 创建并启动一个mysql容器
