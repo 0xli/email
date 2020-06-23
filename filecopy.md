@@ -24,6 +24,9 @@ it will build file list first and copy later:
 [sender] showing file filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319 because of pattern filestore/201703/28/28e3acaaabcfafad2b78fb2b2b2c6319
 
 ```
+change port
+rsync -avz -e 'ssh -p 2229' /data/filestore liwei@gfax.org:/home/liwei/data/GFAX/filestore 
+
 ###2. copy/backup without password
 + The SSH protocol uses public key cryptography for authenticating hosts and users. 
 + https://www.ssh.com/ssh/keygen/
