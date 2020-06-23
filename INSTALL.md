@@ -21,6 +21,7 @@ docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database aumright"
 docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database authlog"
 docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database smtplog"
 docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database smtpdb"
+docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database aumrbllist"
 
 # 导入数据库
  docker exec -i mysql-5.7 mysql -uroot -pallcom aum < aum.20200623.sql
@@ -29,6 +30,7 @@ docker exec -i mysql-5.7 mysql -uroot -pallcom -e "create database smtpdb"
  docker exec -i mysql-5.7 mysql -uroot -pallcom authlog < authlog.20200623.sql
  docker exec -i mysql-5.7 mysql -uroot -pallcom smtplog < smtplog.20200623.sql
  docker exec -i mysql-5.7 mysql -uroot -pallcom smtpdb < smtpdb.20200623.sql
+ docker exec -i mysql-5.7 mysql -uroot -pallcom aumrbllist < aumrbllist.20200623.sql
 ```
 4. software
 ```
