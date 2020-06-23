@@ -1,9 +1,9 @@
 1. hareware and OS
 ```
-db: 512G, mysql
+db: 512G, mysql, authcenter
 mail: 1T SSD，smtp,pop3,imap
-webmail: 
-smtwgw:
+webmail: newwebmail,mailapi
+smtwgw: rbl, smtwgw
 ```
 2. file 
 ```
