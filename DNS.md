@@ -10,6 +10,7 @@ d)	Smtp:smtp.xxx.com, mail.callt.net（用户邮件客户端的smtp服务器地�
 e)	Webmail:mail.xxx.com, ip: x.x.x.x, port：80,test:9080,9443
 ```
 ### mx记录、spf记录、DKIM和DMARC记录
+```
 设置步骤为在贵司的根域名配置页面，对子域名添加相应的DNS记录：需要添加mx记录、spf记录、DKIM和DMARC记录，需要添加的记录值如下：
 MX记录：mx8.gmail.easeye.com.cn
 txt记录："v=spf1 include:easeye-edm.com -all"
@@ -21,3 +22,4 @@ newsletter.XXX.com txt "v=spf1 mx a include:easeye-edm.com -all"
 在“newsletter.XXX.com.”域名下新增两个子域名并设置相应的cname记录如下：
 easeye2007._domainkey.newsletter.XXX.com. cname easeye2007._domainkey.easeye.com.cn.
 _dmarc.newsletter.XXX.com. cname _dmarc.easeye.com.cn.
+```
