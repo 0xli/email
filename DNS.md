@@ -11,7 +11,8 @@ e)	Webmail:mail.xxx.com, ip: x.x.x.x, port：80,test:9080,9443
 ```
 ### mx记录、spf记录、DKIM和DMARC记录
 ```
-设置步骤为在贵司的根域名配置页面，对子域名添加相应的DNS记录：需要添加mx记录、spf记录、DKIM和DMARC记录，需要添加的记录值如下：
+为了提供邮件的投递成功率，还需要在域名解析上进行进一步的配置，邮件投递服务采用上海亿业公司的邮件投递服务。
+设置步骤为在贵司的根域名配置页面，对根域子域名添加相应的DNS记录：需要添加mx记录、spf记录、DKIM和DMARC记录，需要添加的记录值如下：
 MX记录：mx8.gmail.easeye.com.cn
 txt记录："v=spf1 include:easeye-edm.com -all"
 DKIM记录：easeye2007._domainkey.easeye.com.cn.
