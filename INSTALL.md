@@ -4,6 +4,11 @@ db: 512G, mysql, authcenter
 mail: 1T SSD，smtp,pop3,imap
 webmail: newwebmail,mailapi
 smtwgw: rbl, smtwgw,smtpgwmanager,mailadmin
+
+nameserver 114.114.114.114
+keep dns configure:
+chattr +i /etc/resolv.conf
+
 ```
 2. file 
 ```
