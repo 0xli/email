@@ -8,6 +8,8 @@ b)	Pop3：pop3.xxx.com, ip: mail.callt.net,端口：110；995
 c)	Imap:imap.xxx.com, mail.callt.net,端口：143；993
 d)	Smtp:smtp.xxx.com, mail.callt.net（用户邮件客户端的smtp服务器地址，与MX可不同）,端口：25或435
 e)	Webmail:mail.xxx.com, ip: x.x.x.x, port：80,test:9080,9443
+f)  DKIM: dig txt default._domainkey.callt.net
+          https://help.aliyun.com/knowledge_detail/74626.html
 ```
 ###  域名解析：进阶，提高投递成功率
 mx记录、spf记录、DKIM和DMARC记录
