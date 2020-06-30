@@ -71,3 +71,10 @@ public class SmtpClientService {
     }
 }
 ```
+
+配置文件
+```properties
+dkim.private = /appconf/nsmtp/certificates/dkim.der
+dkim.domain = callt.net
+dkim.selector = default
+```
