@@ -10,6 +10,21 @@ d)	Smtp:smtp.xxx.com, mail.callt.net（用户邮件客户端的smtp服务器地�
 e)	Webmail:mail.xxx.com, ip: x.x.x.x, port：80,test:9080,9443
 f)  DKIM: dig txt default._domainkey.callt.net
           https://help.aliyun.com/knowledge_detail/74626.html
+实例：gfax.net
+1. MX 记录：接收邮件的服务器地址
+gfax.net mx smtpgw.callt.net
+2. SPF 记录：发送邮件的服务器地址
+gfax.net txt v=spf1 include:spf.callt.net -all
+3. DKIM：发送服务器签名
+default._domainkey.gfax.net   CNAME   default._domainkey.callt.net
+邮件头的信息：
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=simple/relaxed; t=1593585193;
+	s=default; d=gfax.net; i=liwei@gfax.net;
+	h=Content-Type:MIME-Version:Subject:Message-ID:To:From:Date; l=344;
+	bh=r+4pFaYZ2sjADfpFXQKR934y8e+4melpZKpyN895Bic=;
+	b=sH0adwt1ueYTVu8sWxoDgG50yA7jWPY5zyK7fAJC+7/sIHryPnZ4Xie7CImncg7x
+	8+lEQc++oJfCSt2BTaa3dsN6f+ujBWCobb3YSQ1HBpGpty0mi9wEn6/+M1qdjSLMy5j
+	3fJ+lSOuMdmu0wzz6Pm34ppG4kdmG+U4P1o7L4CE=
 ```
 ###  域名解析：进阶，提高投递成功率
 mx记录、spf记录、DKIM和DMARC记录
