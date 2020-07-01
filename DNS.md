@@ -12,7 +12,7 @@
 | spf  |    | txt | v=spf1 include:smtpgw.callt.net -all| 发送邮件的服务器 |
 | dkim  | default._domainkey. | cname | default._domainkey.callt.net | 服务器签名 |
 
-### 域名解析：基础设置
+#### *域名解析：基础设置
 邮件发送前，需要先进行域名解析，域名解析主要是发送方的域名和跟踪链接域名。
 ```
 假设你的域名是xxx.com
@@ -40,7 +40,7 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=simple/relaxed; t=1593585193;
 	8+lEQc++oJfCSt2BTaa3dsN6f+ujBWCobb3YSQ1HBpGpty0mi9wEn6/+M1qdjSLMy5j
 	3fJ+lSOuMdmu0wzz6Pm34ppG4kdmG+U4P1o7L4CE=
 ```
-###  域名解析：进阶，提高投递成功率
+#### *域名解析：进阶，提高投递成功率
 mx记录、spf记录、DKIM和DMARC记录
 ```
 为了提供邮件的投递成功率，还需要在域名解析上进行进一步的配置，邮件投递服务采用上海亿业公司的邮件投递服务。
