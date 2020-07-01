@@ -1,8 +1,17 @@
-### 邮件服务器参数
+### 邮件客户端相关参数
 |  名称   | 地址  | 端口 | 备注
 |  ----  | ----  |----  | ----  |
-| 单元格  | 单元格 |单元格  | 单元格 |
-| 单元格  | 单元格 |单元格  | 单元格 |
+| web  | webmail.callt.net |9080,9443  | webmail服务器地址 |
+| smtp  | mail.callt.net |25，465| 发送邮件的服务器 |
+| pop3  | mail.callt.net |110,995| 邮件客户端的POP3服务器 |
+| imap4  | mail.callt.net |143,993| 邮件客户端的IMAP服务器 |
+### 有邮件相关的DNS设置相关参数
+|  名称   | 域名 | 类型  | 值 | 备注
+|  ----  | -----|----  |----  | ----  |
+| MX  | domain | MX | smtpgw.callt.net | 接收邮件的服务器 |
+| spf  | domain | txt | v=spf1 include:smtpgw.callt.net -all| 发送邮件的服务器 |
+| dkim  | default._domainkey.domain | cname | default._domainkey.callt.net | 服务器签名 |
+
 ### 域名解析：基础设置
 邮件发送前，需要先进行域名解析，域名解析主要是发送方的域名和跟踪链接域名。
 ```
@@ -11,7 +20,7 @@ a)  MX记录：smtpgw.callt.net
     txt记录："v=spf1 include:smtpgw.callt.net -all"
 b)	Pop3：pop3.xxx.com, ip: mail.callt.net,端口：110；995
 c)	Imap:imap.xxx.com, mail.callt.net,端口：143；993
-d)	Smtp:smtp.xxx.com, mail.callt.net（用户邮件客户端的smtp服务器地址，与MX可不同）,端口：25或435
+d)	Smtp:smtp.xxx.com, mail.callt.net（用户邮件客户端的smtp服务器地址，与MX可不同）,端口：25或465
 e)	Webmail:mail.xxx.com, ip: x.x.x.x, port：80,test:9080,9443
 f)  DKIM: dig txt default._domainkey.callt.net
           https://help.aliyun.com/knowledge_detail/74626.html
