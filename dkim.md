@@ -18,6 +18,13 @@ RyxSqIAJFMV3y/XslSVV2Sc48efPtrdViGUcGYNCC/KrqYNgCF7vRO2oAQ7ePPBo
 hwcR1hzavGeY/AVxpEeIvixQNmunxkdaqHCLuQIDAQAB;s=email;t=s
 ```
 
+### 其他域 DNS 配置
+主机记录 | 记录类型 | 记录值
+---|---|---
+@ | MX | mx.callt.net
+@ | TXT | v=spf1 include:spf.callt.net -all
+default._domainkey | CNAME | dkim.callt.net
+
 ### 代码修改
 在原来的`eml`文件内加上`dkim`的签名，用到了第三方的工具 [java-utils-mail-dkim](https://github.com/markenwerk/java-utils-mail-dkim)
 ```java
@@ -27,9 +34,6 @@ public class SmtpClientService {
 
     @Value("${dkim.private}")
     private String dkimPrivate;
-    
-    @Value("${dkim.domain}")
-    private String dkimDomain;
     
     @Value("${dkim.selector}")
     private String dkimSelector;    
@@ -42,22 +46,22 @@ public class SmtpClientService {
 
     private String dkimSign(String mailFrom, String emlPath) {
         try {
-            logger.info("dkim: domain -> {}, selector -> {}, private key -> {}", dkimDomain, dkimSelector, dkimPrivate);
-            createDkimSigner();
-
+            String domain = mailFrom.substring(mailFrom.indexOf("@") + 1);
+            logger.info("dkim: domain -> {}, selector -> {}, private key -> {}", domain, dkimSelector, dkimPrivate);
+            DkimSigner dkimSigner = new DkimSigner(domain, dkimSelector, new File(dkimPrivate));
             Session session = Session.getInstance(System.getProperties());
             File emlFile = new File(emlPath);
             MimeMessage mimeMessage = new MimeMessage(session, new FileInputStream(emlFile));
 
-            DKIM_SIGNER.setIdentity(mailFrom);
-            DKIM_SIGNER.setHeaderCanonicalization(Canonicalization.SIMPLE);
-            DKIM_SIGNER.setBodyCanonicalization(Canonicalization.RELAXED);
-            DKIM_SIGNER.setSigningAlgorithm(SigningAlgorithm.SHA256_WITH_RSA);
-            DKIM_SIGNER.setLengthParam(true);
-            DKIM_SIGNER.setCopyHeaderFields(false);
+            dkimSigner.setIdentity(mailFrom);
+            dkimSigner.setHeaderCanonicalization(Canonicalization.SIMPLE);
+            dkimSigner.setBodyCanonicalization(Canonicalization.RELAXED);
+            dkimSigner.setSigningAlgorithm(SigningAlgorithm.SHA256_WITH_RSA);
+            dkimSigner.setLengthParam(true);
+            dkimSigner.setCopyHeaderFields(false);
 
-            MimeMessage signMessage = new DkimMessage(mimeMessage, DKIM_SIGNER);
-            String dkimPath = emlPath.replace(emlFile.getName(), emlFile.getName() + "_dkim");
+            MimeMessage signMessage = new DkimMessage(mimeMessage, dkimSigner);
+            String dkimPath = emlPath.replace(emlFile.getName(), emlFile.getName() + FileUtils.DKIM_SUFFIX);
             signMessage.writeTo(new FileOutputStream(new File(dkimPath)));
 
             logger.info("dkim sign success: {}", dkimPath);
@@ -75,6 +79,5 @@ public class SmtpClientService {
 配置文件
 ```properties
 dkim.private = /appconf/nsmtp/certificates/dkim.der
-dkim.domain = callt.net
 dkim.selector = default
 ```
