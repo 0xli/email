@@ -4,8 +4,8 @@
 |  ----  | ----  | ----  |----  | ----  |
 | web  | |webmail.callt.net |9080,9443  | webmail服务器地址 |
 | smtp  | smtp.callt.net |mail.callt.net |25，465| 发送邮件的服务器 |
-| pop3  | pop.callt.net |1103,995| 邮件客户端的POP3服务器 |
-| imap4  | imap.callt.net |143,993| 邮件客户端的IMAP服务器 |
+| pop3  | pop.callt.net |mail.callt.net |1103,995| 邮件客户端的POP3服务器 |
+| imap4  | imap.callt.net |mail.callt.net |143,993| 邮件客户端的IMAP服务器 |
 ### 有邮件相关的DNS设置相关参数
 |  名称   | 域名或子域名 | 类型  | 值 | 备注
 |  ----  | -----|----  |----  | ----  |
