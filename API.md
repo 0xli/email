@@ -13,6 +13,7 @@
 ```
 #### user功能
 ```
-参照mailapi
-1、添加、修改或者删除forward 邮件地址(暂时不做)
+参照和修改mailapi
+1、message id以域名结尾而不是allcomchina.com
+2、添加、修改或者删除forward 邮件地址(暂时不做)
 ```
