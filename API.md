@@ -5,6 +5,7 @@
 3、获取API key（新增）
 -- admin apikey
 -- user apikey
+4、默认发邮件保存到发件箱为true
 ```
 #### admin功能
 ```
@@ -12,5 +13,6 @@
 ```
 #### user功能
 ```
+参照mailapi
 1、添加、修改或者删除forward 邮件地址(暂时不做)
 ```
