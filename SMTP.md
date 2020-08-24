@@ -13,3 +13,5 @@ https://pepipost.com/blog/25-465-587-2525-choose-the-right-smtp-port/
    replyto设为原始邮件地址；
 5、与亿业探讨二级域名的mx的问题   
 ```
+### 自动转发
+sql = "insert into autoforward(umid,forwardto) values(?,?)";
