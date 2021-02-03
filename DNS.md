@@ -10,13 +10,10 @@
 |  名称   | 域名或子域名 | 类型  | 值 | 备注
 |  ----  | -----|----  |----  | ----  |
 | MX  |   | MX | smtpgw.callt.net | 接收邮件的服务器 |
-|     |   |    | qq.com  MX preference = 10, mail exchanger = mx3.qq.com
-qq.com  MX preference = 30, mail exchanger = mx1.qq.com
-qq.com  MX preference = 20, mail exchanger = mx2.qq.com， mx1.qq.com
-Address:  113.96.208.206，mx2.qq.com
-Address:  113.96.208.206
-mx3.qq.com
-Address:  113.96.208.206|
+|     |   |    | qq.com  MX preference = 10, mail exchanger = mx3.qq.com|
+|     |   |    |qq.com  MX preference = 30, mail exchanger = mx1.qq.com |
+|     |   |    |qq.com  MX preference = 20, mail exchanger = mx2.qq.com， mx1.qq.com |
+|     |   |    |Address:  113.96.208.206，mx2.qq.com，Address:  113.96.208.206，mx3.qq.comAddress:  113.96.208.206|
 | spf  |    | txt | v=spf1 include:smtpgw.callt.net -all| 发送邮件的服务器 ，比如QQ的|
 |      | | |比如QQ的SPF为 "v=spf1 include:spf.mail.qq.com -all"，spf.mail.qq.com text ="v=spf1 include:spf-a.mail.qq.com include:spf-b.mail.qq.com include:spf-c.mail.qq.com include:spf-d.mail.qq.com include:spf-e.mail.qq.com include:spf-f.mail.qq.com include:spf-g.mail.qq.com -all"|
 | dkim  | default._domainkey. | cname | default._domainkey.callt.net | 服务器签名 |
